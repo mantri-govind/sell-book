@@ -33,19 +33,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->checkBox($model,'status', array('value'=>1, 'uncheckValue'=>0)); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'last_log'); ?>
-		<?php echo $form->textField($model,'last_log'); ?>
-		<?php echo $form->error($model,'last_log'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'role_id'); ?>
-		<?php echo $form->textField($model,'role_id'); ?>
+		<?php echo $form->dropDownList($model,'role_id',CHtml::listData(state::model()->findAll(),'id','role'));?>
 		<?php echo $form->error($model,'role_id'); ?>
 	</div>
 
