@@ -13,6 +13,10 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+<<<<<<< HEAD
+=======
+	'htmlOptions'=>array('enctype'=>'multipart/form-data'),
+>>>>>>> 1c54d3b6c76671b18fab1f829ca4690e941530b9
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -25,12 +29,16 @@
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
+<<<<<<< HEAD
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php echo $form->textField($model,'status'); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
+=======
+	 
+>>>>>>> 1c54d3b6c76671b18fab1f829ca4690e941530b9
 	<div class="row">
 		<?php echo $form->labelEx($model,'date_time'); ?>
 		<?php echo $form->textField($model,'date_time'); ?>
@@ -39,10 +47,23 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'image'); ?>
+<<<<<<< HEAD
 		<?php echo $form->textField($model,'image',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'image'); ?>
 	</div>
 
+=======
+		<?php echo $form->fileField($model, 'image'); ?>
+		<?php echo $form->error($model,'image'); ?>
+	</div>
+
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'status'); ?>
+		<?php echo $form->checkBox($model,'status', array('value'=>1, 'uncheckValue'=>0)); ?>
+		<?php echo $form->error($model,'status'); ?>
+	</div>
+>>>>>>> 1c54d3b6c76671b18fab1f829ca4690e941530b9
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

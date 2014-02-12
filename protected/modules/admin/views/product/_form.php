@@ -13,6 +13,10 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+<<<<<<< HEAD
+=======
+	'htmlOptions'=>array('enctype'=>'multipart/form-data'),
+>>>>>>> 1c54d3b6c76671b18fab1f829ca4690e941530b9
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -43,6 +47,7 @@
 		<?php echo $form->error($model,'is_sold'); ?>
 	</div>
 
+<<<<<<< HEAD
 		<!--<div class="row">
 		<?php echo $form->labelEx($model,'date_time'); ?>
 	<?php echo $form->textField($model,'date_time'); ?>
@@ -62,6 +67,26 @@
 		<?php echo $form->error($model,'image'); ?>
 	</div>
 
+=======
+	<div class="row">
+		<?php echo $form->labelEx($model,'image'); ?>
+		<?php echo $form->fileField($model, 'image'); ?>
+		<?php echo $form->error($model,'image'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'date_time'); ?>
+		<?php echo $form->textField($model,'date_time'); ?>
+		<?php echo $form->error($model,'date_time'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'category_id'); ?>
+		<?php echo $form->textField($model,'category_id'); ?>
+		<?php echo $form->error($model,'category_id'); ?>
+	</div>
+
+>>>>>>> 1c54d3b6c76671b18fab1f829ca4690e941530b9
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

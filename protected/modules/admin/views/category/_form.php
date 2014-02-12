@@ -27,6 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
+<<<<<<< HEAD
 		<?php echo $form->checkBox($model,'status', array('value'=>1, 'uncheckValue'=>0)); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
@@ -37,6 +38,18 @@
 		<?php echo $form->error($model,'varchar'); ?>
 	</div>-->
  
+=======
+		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->error($model,'status'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'varchar'); ?>
+		<?php echo $form->textField($model,'varchar',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'varchar'); ?>
+	</div>
+
+>>>>>>> 1c54d3b6c76671b18fab1f829ca4690e941530b9
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

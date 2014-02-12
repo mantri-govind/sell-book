@@ -33,6 +33,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
+<<<<<<< HEAD
 		<?php echo $form->textField($model,'status'); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
@@ -46,6 +47,16 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'role_id'); ?>
 		<?php echo $form->textField($model,'role_id'); ?>
+=======
+		<?php echo $form->checkBox($model,'status', array('value'=>1, 'uncheckValue'=>0)); ?>
+		<?php echo $form->error($model,'status'); ?>
+	</div>
+
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'role_id'); ?>
+		<?php echo $form->dropDownList($model,'role_id',CHtml::listData(state::model()->findAll(),'id','role'));?>
+>>>>>>> 1c54d3b6c76671b18fab1f829ca4690e941530b9
 		<?php echo $form->error($model,'role_id'); ?>
 	</div>
 
